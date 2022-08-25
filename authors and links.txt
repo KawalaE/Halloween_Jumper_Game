@@ -1,0 +1,6 @@
+https://ismartal.itch.io/2d-animated-halloween-characters -> entities
+https://opengameart.org/content/parallax-halloween-2d-game-backgrounds?fbclid=IwAR1mP1b8WbFA8-YUK7E-iaGFf9CfwuGTteB-gHyLw5bg-dGxCBmwmzUtbes
+- background
+
+https://mewily.itch.io/green-platformer-hero
+-player
