@@ -8,7 +8,6 @@ class ImageManager:
         self.game_icon = (pygame.image.load('Graphics/Entities/icon.png'))
         self.tombstone = pygame.image.load('Graphics/Background/Tombstone/tombstone.png')
 
-
         # Player
         self.player_stand = pygame.image.load('Graphics/Entities/Player/Player_stand/Player_stand.png').convert_alpha()
         self.player_walk_1 = pygame.image.load('Graphics/Entities/Player/Player_walk/Player1.png').convert_alpha()
@@ -26,6 +25,10 @@ class ImageManager:
         self.witch_3 = pygame.image.load('Graphics/Entities/Witch/Witch3.png').convert_alpha()
         self.witch_4 = pygame.image.load('Graphics/Entities/Witch/Witch4.png').convert_alpha()
 
+        self.bat_1 = pygame.image.load('Graphics/Entities/Bat/Bat1.png').convert_alpha()
+        self.bat_2 = pygame.image.load('Graphics/Entities/Bat/Bat2.png').convert_alpha()
+        self.bat_3 = pygame.image.load('Graphics/Entities/Bat/Bat3.png').convert_alpha()
+        self.bat_4 = pygame.image.load('Graphics/Entities/Bat/Bat4.png').convert_alpha()
 
     def load_image(self, path: str) -> list[pygame.Surface]:
         image_list = []

@@ -20,10 +20,6 @@ class Game:
         self.score_message_rectangle = None
         self.press_space_rectangle = None
         self.game_caption_rectangle = None
-
-
-        self.witch_animation_timer = None
-        self.ghost_animation_timer = None
         self.obstacle_timer = None
 
         self.score = 0
@@ -77,9 +73,7 @@ class Game:
         self.score_message = self.test_font.render(f'Your score: {self.score}', False, '#31F5EC')
         self.score_message_rectangle = self.score_message.get_rect(center=(400, 330))
 
-
     def parallax_draw(self, image_list: list[pygame.Surface]) -> None:
-
         background_width = self.img_manager.background_images[0].get_width()
 
         for index, i in enumerate(image_list):
@@ -100,10 +94,13 @@ class Game:
         self.obstacle_group.update()
 
     def spawn_enemy(self):
-        if randint(0, 2):
-            self.obstacle_group.add(Obstacle('ghost', self.img_manager))
+        if randint(0, 3):
+            self.obstacle_group.add(Obstacle('ghost', self.img_manager, self.score))
         else:
-            self.obstacle_group.add(Obstacle('witch', self.img_manager))
+            if randint(0, 2):
+                self.obstacle_group.add(Obstacle('witch', self.img_manager, self.score))
+            else:
+                self.obstacle_group.add(Obstacle('bat', self.img_manager, self.score))
 
     def check_game_events(self):
         for event in pygame.event.get():
@@ -124,12 +121,6 @@ class Game:
         self.obstacle_timer = pygame.USEREVENT + 1  # custom user event
         pygame.time.set_timer(self.obstacle_timer, 1500)
 
-        self.ghost_animation_timer = pygame.USEREVENT + 2
-        pygame.time.set_timer(self.ghost_animation_timer, 500)
-
-        self.witch_animation_timer = pygame.USEREVENT + 2
-        pygame.time.set_timer(self.witch_animation_timer, 200)
-
     def collision_sprite(self):
         if pygame.sprite.spritecollide(self.player.sprite, self.obstacle_group, False):
             self.obstacle_group.empty()
@@ -143,10 +134,8 @@ class Game:
         active_score_rectangle = active_score_surface.get_rect(center=(480, 100))
         self.screen.blit(active_score_surface, active_score_rectangle)
 
-
     def draw_outro_screen(self):
         self.screen.fill('#000000')
-
         if self.score == 0:
             self.screen.blit(self.press_space, self.press_space_rectangle)
             self.screen.blit(self.player_stand, self.player_stand_rectangle)
