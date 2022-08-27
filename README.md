@@ -1,5 +1,5 @@
 # Halloween_Jumper_Game
-Halloween themed game in python using pygame module. It is a halloween twist on Google Chrome Dino game. There are 3 different entities (bat, ghost, witch) and one player. Bacground is executed using paralax method that was implemented in parallax function. 
+Halloween themed game in python using pygame module. It is a halloween twist on Google Chrome Dino game. There are 3 different entities (bat, ghost, witch) and one player. Background is executed using parallax method that was implemented in parallax_draw() function. 
 The longer the player won't collide with the evil entity the higher score count. The longer you play the faster enemies move. It is a simple project to excercise OOP and it 
 is ment for future development: adding levels and other evil enitites. 
 
