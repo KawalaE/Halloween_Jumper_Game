@@ -10,7 +10,10 @@ Halloween entities bundle: https://ismartal.itch.io/2d-animated-halloween-charac
 
 Main player (Pink entity): https://craftpix.net/freebies/free-pixel-art-tiny-hero-sprites/?num=1&count=315&sq=tiny%20hero%20sprites&pos=5
 
+Tombstone: https://flyclipart.com/tombstone-pixel-art-maker-tombstone-png-419113#
+
 Parallax bacground images: https://opengameart.org/content/parallax-halloween-2d-game-backgrounds?fbclid=IwAR1mP1b8WbFA8-YUK7E-iaGFf9CfwuGTteB-gHyLw5bg-dGxCBmwmzUtbes
+
 
 Audio:
 Main music: https://opengameart.org/content/ghoulish-fun
